@@ -1,16 +1,10 @@
 # Loading an ONNX Deep Learning Model in Unity
 
-```mermaid
-flowchart TD;
-    subgraph Local Environment
-        A[Keras model] --- tf2onnx --> B[ONNX model file]
-    end
-    
-
-    subgraph Unity Environment
-        B --> C[Import & Implement model loading script] --> D[Load ONNX model & Perform predictions]
-    end
-```
+> [!IMPORTANT]
+> Tested on:
+> - Mac OS 14.4.1
+> - Unity 2023.2.7f1
+> - Python 3.11.9
 
 ## Prerequisites
 
