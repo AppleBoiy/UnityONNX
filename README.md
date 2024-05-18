@@ -1,5 +1,20 @@
 # Loading an ONNX Deep Learning Model in Unity
 
+```mermaid
+sequenceDiagram
+    participant PythonScript
+    participant UnityScript
+
+    PythonScript->>PythonScript: Convert Keras model to ONNX
+    PythonScript-->>UnityScript: Transfer ONNX model file
+
+    UnityScript-->>UnityScript: Import ONNX model file
+    UnityScript-->>UnityScript: Implement model loading script
+    UnityScript-->>UnityScript: Run Unity application
+    UnityScript->>UnityScript: Load ONNX model
+    UnityScript->>UnityScript: Perform predictions
+```
+
 ## Prerequisites
 
 Before loading your ONNX deep learning model in Unity, you need to convert your Keras model to ONNX format. Ensure you have the following requirements:
