@@ -1,13 +1,18 @@
 # Loading an ONNX Deep Learning Model in Unity
 
 ```mermaid
-graph TD;
-    A[Convert Keras model to ONNX] --> B(Transfer ONNX model file)
-        B --> C(Import ONNX model file)
-        C --> D(Implement model loading script)
-        D --> E(Run Unity application)
-        E --> F(Load ONNX model)
-        F --> G(Perform predictions)    
+sequenceDiagram
+    participant PythonScript
+    participant UnityScript
+
+        PythonScript->>PythonScript: Convert Keras model to ONNX
+        PythonScript-->>UnityScript: Transfer ONNX model file
+
+        UnityScript-->>UnityScript: Import ONNX model file
+        UnityScript-->>UnityScript: Implement model loading script
+        UnityScript-->>UnityScript: Run Unity application
+        UnityScript->>UnityScript: Load ONNX model
+        UnityScript->>UnityScript: Perform predictions    
 ```
 
 ## Prerequisites
