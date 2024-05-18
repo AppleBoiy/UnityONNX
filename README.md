@@ -1,13 +1,15 @@
 # Loading an ONNX Deep Learning Model in Unity
 
 ```mermaid
-graph LR;
-    A(Convert Keras model to ONNX) --> B(Transfer ONNX model file);
-        B --> C(Import ONNX model file);
-        C --> D(Implement model loading script);
-        D --> E(Run Unity application);
-        E --> F(Load ONNX model);
-        F --> G(Perform predictions);    
+flowchart TD;
+    subgraph Local Environment
+        A[Keras model] --- tf2onnx --> B[ONNX model file]
+    end
+    
+
+    subgraph Unity Environment
+        B --> C[Import & Implement model loading script] --> D[Load ONNX model & Perform predictions]
+    end
 ```
 
 ## Prerequisites
